@@ -1,0 +1,17 @@
+[project]
+name = "ai-projet"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Jeanne Gautier", email = "jeanne.wwork@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "ipykernel>=7.2.0",
+    "pandas>=3.0.2",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.6,<0.12.0"]
+build-backend = "uv_build"
