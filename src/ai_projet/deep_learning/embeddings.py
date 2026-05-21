@@ -46,7 +46,7 @@ def load_text_dataset(input_path: Path) -> pd.DataFrame:
 
 
 def compute_embeddings(texts, model_name: str, batch_size: int):
-    model = SentenceTransformer(model_name)
+    model = SentenceTransformer(model_name, device="cpu")
 
     embeddings = model.encode(
         texts,
@@ -190,14 +190,14 @@ def main():
     parser.add_argument(
         "--input",
         type=str,
-        default="data/processed/etablissements_texts.csv",
+        default="/users/local/j22gauti/AI-projet/data/etablissements_texts.csv",
         help="Chemin vers le dataset texte.",
     )
 
     parser.add_argument(
         "--output-dir",
         type=str,
-        default="data/embeddings",
+        default="/users/local/j22gauti/AI-projet/data/embeddings",
         help="Dossier où sauvegarder les embeddings et résultats.",
     )
 
