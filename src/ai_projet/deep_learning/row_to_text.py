@@ -226,11 +226,11 @@ def save_text_dataset(df, output_path, target_col=TARGET):
 
     return output_df
 
-df = pd.read_csv("/Users/jeannegautier/Projets/AI-projet/data/etablissements_clean_supervised.csv")
+df = pd.read_csv("/users/local/j22gauti/AI-projet/data/etablissements_clean_supervised.csv")
 
 text_df = save_text_dataset(
     df,
-    "/Users/jeannegautier/Projets/AI-projet/data/etablissements_texts.csv"
+    "/users/local/j22gauti/AI-projet/data/etablissements_texts.csv"
 )
 
 print(text_df.head())
