@@ -288,6 +288,7 @@ def main():
         greater_is_better=True,
         logging_steps=20,
         report_to="none",
+        use_cpu="True"
     )
 
     trainer = Trainer(
